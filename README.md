@@ -28,7 +28,7 @@ Afterwards we configure the wordpress-nginx container to run with the mysql cont
 $ docker run --name docker-wordpress-nginx -d \
 --link mysql:mysql \
 -p 80:80 \
--v /opt/yourwpcontenthostdir:/usr/share/nginx/www/wp-content \
+-v /opt/yourwwwroothostdir:/usr/share/nginx/www \
 -e 'DB_PASSWORD=yourPwHere' -e 'DB_NAME=wordpress' \
 docker-wordpress-nginx
 
